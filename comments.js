@@ -3,14 +3,14 @@
 // create a route handler
 // listen for incoming requests on port 3000
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const { randomBytes } = require('crypto');
-const cors = require('cors');
+import express from 'express';
+import { json } from 'body-parser';
+import { randomBytes } from 'crypto';
+import cors from 'cors';
 
 // create express app
 const app = express();
-app.use(bodyParser.json());
+app.use(json());
 app.use(cors());
 
 const commentsByPostId = {};
